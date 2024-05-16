@@ -28,6 +28,11 @@ alias cdnu="cd __new_ui__/"
 alias gitfp="git fetch && git pull"
 alias sslack="systemctl restart snapd.service && sudo systemctl start snapd.apparmor && slack"
 
+mchrom() {
+  file=$1
+  chromium --disable-web-security --use-fake-ui-for-media-stream --use-fake-device-for-media-stream --use-file-for-fake-video-capture=$1
+}
+
 run() {
     number=$1
     shift
